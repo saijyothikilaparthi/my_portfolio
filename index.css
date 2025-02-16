@@ -169,7 +169,7 @@ nav ul li a {
 .about-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 15px;
+  padding: 40px;
   width: 30%;
   min-width: 300px; /* Ensures it doesn’t get too small */
   backdrop-filter: blur(10px);
@@ -323,6 +323,47 @@ nav ul li a {
     max-width: 100%;
   }
 }
+
+
+/* Card Styles */
+.education-card, .skill-card, .project-card, .tools-card ,.badges-card{
+  background: rgba(255, 255, 255, 0.1); /* Glass-like transparent effect */
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Glass effect */
+  border: 3px solid transparent; /* Initial transparent border */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  animation: borderAnimation 4s linear infinite; /* Multi-color border animation */
+}
+
+/* Multi-Color Rotating Border Animation */
+@keyframes borderAnimation {
+  0% {
+      border-color: rgb(5, 1, 61);
+  }
+  25% {
+      border-color: rgb(44, 20, 255);
+  }
+  50% {
+      border-color: rgb(180, 50, 255);
+  }
+  75% {
+      border-color: rgb(231, 18, 231);
+  }
+  100% {
+      border-color: hsl(325, 100%, 50%);
+  }
+}
+
+.education-card:hover, .skill-card:hover, .project-card:hover {
+  transform: translateY(-10px);
+}
+
 
 /* Education Section */
 .education {
@@ -719,4 +760,3 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
-/* About Section */
