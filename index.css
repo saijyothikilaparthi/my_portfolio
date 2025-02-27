@@ -760,3 +760,16 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+/* Fix Page Overflow */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Ensure all sections fit within the screen */
+.container, .about, .education, .skills, .projects, .badges, .achievements, .contact, .footer {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
